@@ -82,7 +82,6 @@ h6 {
   color: var(--color-brand-primary-base);
 }
 
-
 .container {
   width: 96vw;
   margin: 0 auto;
@@ -105,21 +104,86 @@ h6 {
 }
 
 .all-workers {
-  width: 330px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
+
+.workers {
+  text-align: center;
+}
+
+.worker-name {
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Open sans', Arial, Helvetica, sans-serif;
+  font-size: 1.1rem; /**22px da fonte que era pra ser / 20px definido no html lá em cima = 1.1 = 1.1rem**/
+  font-weight: 800;
+  color: var(--color-text-dark);
+}
+
+
 
 @media (max-width: 480px) {
   .container{
     width: 94vw;
   }
+
+  .text-icon {
+    font-size: 0.62rem;
+  }
+
+  .all-app-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12%;
+    margin-top: 15%;
+  }
+  
+  .app-icon {
+    width: 25vw;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .all-workers {
+    flex-direction: column;
+  }
+
+  .workers {
+    margin-bottom: 1.2rem;
+  }
 }
 
 @media (max-width: 1440px) {
+  .container {
+    width: 67vw; /**960px(tamanho do container)/1440px(largura da tela) = 0,67 = 67vw **/
+  }
+
+  .text-icon {
+    font-size: 0.8rem;
+  }
+
+  .all-app-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 5%;
+  }
+
+  .app-icon {
+    width: 20vw;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .workers {
+    width: 25vw;
+  }
+  
   .all-workers {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
   }
 }
